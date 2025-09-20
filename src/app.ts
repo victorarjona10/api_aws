@@ -73,6 +73,8 @@ passport.use(
     }
   )
 );
+
+//comentario para hacer push
 // comentario 
 // 序列化用户（用于 session）//
 passport.serializeUser((user: any, done) => {
