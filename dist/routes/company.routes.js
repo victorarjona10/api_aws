@@ -1,0 +1,24 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const company_controller_1 = require("../controllers/company.controller");
+const session_1 = require("../middleware/session");
+const router = (0, express_1.Router)();
+router.get("/companies", session_1.checkJwt, company_controller_1.getCompanies);
+router.get("/", session_1.checkJwt, company_controller_1.getAllCompanies);
+router.get("/search/:search", company_controller_1.getCompanyByName);
+router.get("/searchProduct/:name", company_controller_1.getCompaniesByProductName);
+router.get("/pendingOrders/:id", session_1.checkJwt, company_controller_1.getPendingOrdersByCompanyId);
+router.post("/login", company_controller_1.loginCompany);
+router.put("/updateCompanyAvatar", session_1.checkJwt, company_controller_1.updateCompanyAvatar);
+router.post("/", session_1.checkJwt, company_controller_1.postCompany);
+router.put("/rate/:id", session_1.checkJwt, company_controller_1.RateCompany);
+router.post("/review/:id", session_1.checkJwt, company_controller_1.reviewCompany);
+router.get("/reviews/:id", session_1.checkJwt, company_controller_1.getCompanyReviews);
+router.put("/:id/addProduct", session_1.checkJwt, company_controller_1.addProductToCompany);
+router.get("/:id/products", session_1.checkJwt, company_controller_1.getCompanyWithProductsById);
+router.get("/:id", session_1.checkJwt, company_controller_1.getCompanyById);
+router.put("/:id", session_1.checkJwt, company_controller_1.updateCompanyById);
+router.delete("/:id", session_1.checkJwt, company_controller_1.deleteCompanyById);
+exports.default = router;
+//# sourceMappingURL=company.routes.js.map

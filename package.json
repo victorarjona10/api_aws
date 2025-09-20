@@ -1,0 +1,57 @@
+{
+  "name": "crud-ts",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "cd src && npx ts-node app.ts",
+    "start:prod": "node dist/app.js",
+    "lint": "eslint src/**/*.{js,ts}",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "**/*.{js,ts}": "eslint"
+  },
+  "dependencies": {
+    "@types/passport": "^1.0.17",
+    "@types/swagger-jsdoc": "^6.0.4",
+    "@types/swagger-ui-express": "^4.1.7",
+    "axios": "^1.8.4",
+    "bcrypt": "^5.1.1",
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^4.21.2",
+    "express-session": "^1.18.1",
+    "express-validator": "^7.2.1",
+    "jsdoc": "^4.0.4",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.11.0",
+    "nodemon": "^3.1.9",
+    "passport": "^0.7.0",
+    "passport-google-oauth20": "^2.0.0",
+    "swagger": "^0.0.1",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1",
+    "uuid": "^11.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "@types/axios": "^0.9.36",
+    "@types/bcrypt": "^5.0.2",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/express-session": "^1.18.1",
+    "@types/google.maps": "^3.58.1",
+    "@types/jsonwebtoken": "^9.0.9",
+    "@types/mongoose": "^5.11.96",
+    "@types/passport-google-oauth20": "^2.0.16",
+    "@types/uuid": "^10.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.62.0",
+    "@typescript-eslint/parser": "^5.62.0",
+    "globals": "^16.1.0",
+    "husky": "^9.0.0",
+    "lint-staged": "^13.2.0",
+    "ts-node": "^10.9.2"
+  }
+}

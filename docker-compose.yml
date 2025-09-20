@@ -1,0 +1,36 @@
+services:
+  miapi:
+    image: victorarjona10/api_quickfind_ea:latest
+    ports:
+      - "40000:40000"
+    depends_on:
+      - mongodb
+    networks:
+      - public
+      - db-tier
+  mongodb:
+    image: victorarjona10/base_de_datos_mongodb:latest
+    ports:
+      - "27017:27017"
+    networks:
+      - db-tier
+    volumes:      
+      - "/var/lib/mongodb_data:/data/db"
+      - "/var/lib/mongodb_backup:/backup"
+  angular:
+    image: victorarjona10/back_office_angular:latest
+    ports: 
+      - "40001:80"
+    networks:
+      - public
+  react:
+    image: victorarjona10/react_web_14_5:latest
+    ports: 
+      - "40002:80"
+    networks:
+      - public
+
+networks:
+  public:
+    external: true
+  db-tier:

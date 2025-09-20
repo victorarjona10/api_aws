@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    /* Basic Options */
+    "target": "es2016",                  // Define la versión de JavaScript emitida
+    "module": "commonjs",                // Usa el sistema de módulos CommonJS
+    "outDir": "./dist",                  // Carpeta de salida para los archivos compilados
+    "rootDir": "./src",                  // Carpeta raíz de los archivos fuente
+    "strict": true,                      // Habilita todas las comprobaciones estrictas
+    "esModuleInterop": true,             // Mejora la interoperabilidad con módulos CommonJS
+    "forceConsistentCasingInFileNames": true, // Asegura consistencia en el uso de mayúsculas/minúsculas en los nombres de archivo
+
+    /* Source Map Options */
+    "sourceMap": true,                   // Genera archivos de mapa de origen para depuración
+
+    /* Type Checking */
+    "skipLibCheck": true,                // Omite la comprobación de tipos en archivos .d.ts
+
+    /* Module Resolution Options */
+    "moduleResolution": "node",         // Usa la resolución de módulos estilo Node.js
+    "resolveJsonModule": true,          // Permite importar archivos JSON
+
+    /* Emit Options */
+    "removeComments": true,             // Elimina comentarios en los archivos emitidos
+    "declaration": true,                // Genera archivos .d.ts para los tipos
+    "declarationDir": "./dist/types"    // Carpeta de salida para los archivos de declaración
+  },
+  "include": ["src/**/*"],               // Incluye todos los archivos dentro de la carpeta src
+  "exclude": ["node_modules", "dist"]    // Excluye node_modules y la carpeta de salida
+}

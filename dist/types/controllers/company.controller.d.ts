@@ -1,0 +1,17 @@
+import { Request, Response } from "express";
+export declare function postCompany(req: Request, res: Response): Promise<void>;
+export declare function getAllCompanies(req: Request, res: Response): Promise<void>;
+export declare function getCompanyById(req: Request, res: Response): Promise<void>;
+export declare function updateCompanyById(req: Request, res: Response): Promise<void>;
+export declare function deleteCompanyById(req: Request, res: Response): Promise<void>;
+export declare function getCompanyWithProductsById(req: Request, res: Response): Promise<void>;
+export declare function getCompanies(req: Request, res: Response): Promise<void>;
+export declare function RateCompany(req: Request, res: Response): Promise<void>;
+export declare function reviewCompany(req: Request, res: Response): Promise<void>;
+export declare function getCompanyReviews(req: Request, res: Response): Promise<void>;
+export declare function addProductToCompany(req: Request, res: Response): Promise<void>;
+export declare function getCompanyByName(req: Request, res: Response): Promise<void>;
+export declare function getCompaniesByProductName(req: Request, res: Response): Promise<void>;
+export declare function loginCompany(req: Request, res: Response): Promise<void>;
+export declare function updateCompanyAvatar(req: Request, res: Response): Promise<void>;
+export declare function getPendingOrdersByCompanyId(req: Request, res: Response): Promise<void>;
