@@ -123,7 +123,7 @@ app.use(cors({
 
 app.use(routeNotFound);//Middleware para informar de una ruta inexistente fuera de /users , /products ,etc.
 
-app.listen(PORT,HOST_IP,() => {
+app.listen(PORT,'0.0.0.0',() => {
   console.log(`Server running at new try  http://${HOST_IP}:${PORT}`);
   console.log(`Swagger running at http://${HOST_IP}:${PORT}/api-docs/`);
 });
