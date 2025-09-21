@@ -16,7 +16,7 @@ jobs:
       - name: Debug secret
         run: echo "TOKEN LENGTH $(echo -n '${{ secrets.DOCKER_HUB_TOKEN_VICTORARJONA }}' | wc -c)"
       - name: build Image
-        run: docker build . -t victorarjona10/backend:${{ env.IMAGE_TAG }}
+        run: docker build . -t victorarjona10/aws_api:${{ env.IMAGE_TAG }}
       - name: Login to Docker Hub
         run: docker login -u "victorarjona10" -p "${{ secrets.DOCKER_HUB_TOKEN_VICTORARJONA }}"
       - name: Push image to Docker Hub
