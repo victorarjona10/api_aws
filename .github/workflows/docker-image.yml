@@ -20,4 +20,4 @@ jobs:
       - name: Login to Docker Hub
         run: docker login -u "victorarjona10" -p "${{ secrets.DOCKER_HUB_TOKEN_VICTORARJONA }}"
       - name: Push image to Docker Hub
-        run: docker push victorarjona10/backend:${{ env.IMAGE_TAG }}
+        run: docker push victorarjona10/aws_api:${{ env.IMAGE_TAG }}
