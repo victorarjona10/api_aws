@@ -150,7 +150,7 @@ export async function getCompanyWithProductsById(
 export async function getCompanies(req: Request, res: Response): Promise<void> {
   // Clave de API de Google Maps
   const GOOGLE_API_KEY = process.env.GOOGLE_API_KEY; // Reemplaza con tu clave de API
-  //const ejemplo_solicitud = 'http://localhost:3000/companies?query=restaurant&lat=41.2804038&lng=1.9848002&radius=300';
+  //const ejemplo_solicitud = 'http://react:3000/companies?query=restaurant&lat=41.2804038&lng=1.9848002&radius=300';
   try {
     // Obtén los parámetros de la consulta
     const query = (req.query.query as string) || "Carrefour"; // Palabra clave para buscar

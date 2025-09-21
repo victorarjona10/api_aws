@@ -278,7 +278,7 @@ function updateAvatar(req, res) {
 }
 function Google(req, res, next) {
     return __awaiter(this, void 0, void 0, function* () {
-        const origin = req.query.origin || 'http://localhost:3000';
+        const origin = req.query.origin || 'http://react:3000';
         const state = JSON.stringify({ origin });
         passport_1.default.authenticate('google', {
             scope: ['profile', 'email'],
@@ -290,7 +290,7 @@ function Google(req, res, next) {
 const googleCallback = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const state = JSON.parse(req.query.state || '{}');
-        const origin = state.origin || 'http://localhost:3000';
+        const origin = state.origin || 'http://react:3000';
         const user = req.user;
         const token = (0, jwt_handle_1.generateToken)(user._id.toString(), user.email);
         const refreshToken = (0, uuid_1.v4)();

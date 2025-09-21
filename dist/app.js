@@ -91,13 +91,13 @@ app.get("/api/auth/google/callback/test", (req, res) => {
     res.send("Google OAuth Succcess! 回调成功！请检查控制台日志。");
 });
 app.use((0, cors_1.default)({
-    origin: ['http://localhost:4200', 'http://localhost:3000'],
+    origin: ['http://react:4200', 'http://react:3000'],
     credentials: true
 }));
 app.use(routeNotFound_1.routeNotFound);
 app.listen(PORT, () => {
-    console.log(`Server running at  http://localhost:${PORT}`);
-    console.log(`Swagger running at http://localhost:${PORT}/api-docs/`);
+    console.log(`Server running at  http://react:${PORT}`);
+    console.log(`Swagger running at http://react:${PORT}/api-docs/`);
 });
 exports.default = app;
 //# sourceMappingURL=app.js.map

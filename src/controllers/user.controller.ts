@@ -432,7 +432,7 @@ export async function updateAvatar(req: Request, res: Response): Promise<void> {
 
 
 export async function Google(req: Request, res: Response, next: NextFunction): Promise<void> {
-    const origin = req.query.origin || 'http://localhost:3000';
+    const origin = req.query.origin || 'http://react:3000';
     const state = JSON.stringify({ origin }); // Incluye el origen en el estado
     passport.authenticate('google', {
       scope: ['profile', 'email'],
@@ -447,7 +447,7 @@ export async function Google(req: Request, res: Response, next: NextFunction): P
 export const googleCallback = async (req: Request, res: Response): Promise<void> => {
   try {
     const state = JSON.parse((req.query.state as string) || '{}'); // Recupera el estado
-    const origin = state.origin || 'http://localhost:3000'; // Obtén el origen del estado
+    const origin = state.origin || 'http://react:3000'; // Obtén el origen del estado
 
     const user = req.user as any;
 

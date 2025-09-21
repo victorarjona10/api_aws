@@ -12,7 +12,7 @@ const options = {
         },
         servers: [
             {
-                url: 'http://localhost:4000',
+                url: 'http://react:4000',
             },
         ],
         components: {

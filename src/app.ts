@@ -30,8 +30,8 @@ const PORT = process.env.PORT ? parseInt(process.env.PORT, 10) : 40000;
 const HOST_IP = process.env.HOST_IP || "0.0.0.0";
 const ANGULAR_PORT = process.env.ANGULAR_PORT || "4200";
 const REACT_PORT = process.env.REACT_PORT || "3000";
-const ANGULAR_DOMAIN = process.env.ANGULAR_DOMAIN || "localhost";
-const REACT_DOMAIN = process.env.REACT_DOMAIN || "localhost";
+const ANGULAR_DOMAIN = process.env.ANGULAR_DOMAIN || "react";
+const REACT_DOMAIN = process.env.REACT_DOMAIN || "react";
 
 
 // ================= Google OAuth 配置 =================
@@ -117,7 +117,7 @@ app.get("/api/auth/google/callback/test", (req: Request, res: Response) => {
 });
 
 app.use(cors({
-  origin: [`http://${ANGULAR_DOMAIN}:*`, `http://${REACT_DOMAIN}:*`, `http://147.83.7.208:80`, `http://ea6.upc.edu`], //quitar puertos y acerptar dominiso *
+  origin: [`http://${ANGULAR_DOMAIN}:*`, `http://${REACT_DOMAIN}:*`, `http://147.83.7.208:80`, `http://ea6.upc.edu`, `http://react:*`], //quitar puertos y acerptar dominiso *
   credentials: true
 }));
 
