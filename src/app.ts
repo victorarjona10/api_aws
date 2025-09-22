@@ -117,7 +117,7 @@ app.get("/api/auth/google/callback/test", (req: Request, res: Response) => {
 });
 
 app.use(cors({
-  origin: [`http://${ANGULAR_DOMAIN}:*`, `http://${REACT_DOMAIN}:*`, `http://147.83.7.208:80`, `http://ea6.upc.edu`, `http://react:*`], //quitar puertos y acerptar dominiso *
+  origin: [`http://${ANGULAR_DOMAIN}:*`, `http://${REACT_DOMAIN}:*`, `http://147.83.7.208:80`, `http://ea6.upc.edu`, `http://react:*`, `http://172.31.36.54:*`], //quitar puertos y acerptar dominiso *
   credentials: true
 }));
 
